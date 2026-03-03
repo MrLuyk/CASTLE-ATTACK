@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     public Rigidbody rigidbody;
     public float forceAmount = 15.0f;
+    public GameObject explosionPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +18,14 @@ public class Projectile : MonoBehaviour
         rigidbody.AddForce(forceDirection *  forceAmount, ForceMode.VelocityChange);
     }
 
-    private void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         print("Collides with " + other.gameObject.name);
         if (other.gameObject.CompareTag("Castle"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }
