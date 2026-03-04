@@ -69,3 +69,4 @@ MonoBehaviour:
   force: 10
   radius: 2
   modifier: 1
+  explosionFX: {fileID: 1024738328458683860, guid: e009742b25fb6214297b3ce07e490308, type: 3}

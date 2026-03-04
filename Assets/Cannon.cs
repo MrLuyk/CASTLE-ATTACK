@@ -8,6 +8,8 @@ public class Cannon : MonoBehaviour
     public Animator animator;
     public Transform fireSocket;
     public float rotationRate = 90.0f;
+    public ParticleSystem fireFX;
+    public int numProjectiles = 0;
 
     // Update is called once per frame
     void Update()
@@ -26,5 +28,7 @@ public class Cannon : MonoBehaviour
     {
         animator.SetTrigger("Fire");
         Instantiate(projectilePrefab, fireSocket.position, fireSocket.rotation);
+        fireFX.Play();
+        numProjectiles++;
     }
 }

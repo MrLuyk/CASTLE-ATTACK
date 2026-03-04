@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
         rigidbody.AddForce(forceDirection *  forceAmount, ForceMode.VelocityChange);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         print("Collides with " + other.gameObject.name);
         if (other.gameObject.CompareTag("Castle"))
