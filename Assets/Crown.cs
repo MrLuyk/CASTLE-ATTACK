@@ -13,7 +13,6 @@ public class Crown : MonoBehaviour
             Score score = FindObjectOfType<Score>();
             if (score)
             {
-                Debug.Log("ENDLEVEL");
                 score.EndLevel();
             }
 

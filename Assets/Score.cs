@@ -14,29 +14,24 @@ public class Score : MonoBehaviour
 
     public void EndLevel()
     {
-        Debug.Log("score endlevel");
         Cannon cannon = FindAnyObjectByType<Cannon>();
         Debug.Log(cannon);
         if (cannon)
         {
             int numProjectiles = cannon.numProjectiles;
-            Debug.Log("CANNON");
 
             if (numProjectiles < threeStars)
             {
-                Debug.Log("THREESTARS");
                 scoreDisplay.text = "Three Stars!";
                 scoreAnimator.SetInteger("Stars", 3);
             }
             else if (numProjectiles < twoStars)
             {
-                Debug.Log("2STARS");
                 scoreDisplay.text = "Two Stars!";
                 scoreAnimator.SetInteger("Stars", 2);
             }
             else
             {
-                Debug.Log("1STARS");
                 scoreDisplay.text = "One Star!";
                 scoreAnimator.SetInteger("Stars", 1);
             }
