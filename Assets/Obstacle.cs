@@ -4,7 +4,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     // TODO: A public float variable to control how fast the obstacle moves across the screen
-    public float moveSpeed = 5.0f;
+    public float moveSpeed = 2.0f;
     // TODO: A public float variable to control how far the object should go before being destroyed offscreen.
     public float endRange = 30;
 
@@ -19,8 +19,6 @@ public class Obstacle : MonoBehaviour
     {
         // TODO: Move the obstacle to the left at a constant rate. 
         // Make sure this calculation is frame rate independent (hint: use Time.deltaTime)
-        if (gameObject.CompareTag("Castle"))
-        {
             transform.position += Vector3.back * moveSpeed * Time.deltaTime;
 
             // TODO: If the obstalce is off screen to the left, destroy this GameObject (hint: Destroy(gameObject))
@@ -29,26 +27,5 @@ public class Obstacle : MonoBehaviour
                 Debug.Log("End of Range.");
                 Destroy(gameObject);
             }
-        }
-    }
-
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("CastlePart"))
-        {
-            print("collido");
-            if (other.gameObject.CompareTag("Ground"))
-            {
-                StartCoroutine(CoUpdate());
-            }
-        }
-        Debug.Log(other.gameObject);
-    }
-
-    IEnumerator CoUpdate()
-    {
-
-            yield return new WaitForSeconds(2);
-            Destroy(gameObject);
     }
 }

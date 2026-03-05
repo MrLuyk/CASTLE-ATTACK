@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  endRange: 60
+  endRange: 100
 --- !u!1001 &1809881785350719495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ PrefabInstance:
       addedObject: {fileID: 934772864825532619}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 526caecd2ce70604fa97884bde30a14e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3308025268567686460}
+      addedObject: {fileID: 7669992781273522064}
   m_SourcePrefab: {fileID: 100100000, guid: 526caecd2ce70604fa97884bde30a14e, type: 3}
 --- !u!1 &1575296924511810902 stripped
 GameObject:
@@ -174,7 +174,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3308025268567686460
+--- !u!114 &7669992781273522064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,11 +183,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575296924511810902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87e7ba9f24d08b4fb8ae067680bf5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b5d0bca97eaf454cb4a05e095c02e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  endRange: 30
+  checkDistance: 2
+  targetTag: Castle
 --- !u!4 &2204305964326907884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 526caecd2ce70604fa97884bde30a14e, type: 3}
@@ -207,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12178254
+      value: -0.08000016
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -261,7 +261,7 @@ PrefabInstance:
       addedObject: {fileID: 3165445560772345620}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 99739461584125103}
+      addedObject: {fileID: 3549253383666887178}
   m_SourcePrefab: {fileID: 100100000, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
 --- !u!4 &4901847553518256952 stripped
 Transform:
@@ -321,7 +321,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &99739461584125103
+--- !u!114 &3549253383666887178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,11 +330,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5714237574128769410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87e7ba9f24d08b4fb8ae067680bf5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c465ccbf33374f4792cd86c57afa38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  endRange: 30
+  checkDistance: 0.5
+  targetTag: Castle
 --- !u!1001 &7714959070182056683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 71fe98a5ca2ee9d4ebf68cbbc90366d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8782175
+      value: 3.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 71fe98a5ca2ee9d4ebf68cbbc90366d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -403,7 +403,7 @@ PrefabInstance:
       addedObject: {fileID: 1804800863220022546}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71fe98a5ca2ee9d4ebf68cbbc90366d8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8134761858616956300}
+      addedObject: {fileID: 2840381759930904564}
   m_SourcePrefab: {fileID: 100100000, guid: 71fe98a5ca2ee9d4ebf68cbbc90366d8, type: 3}
 --- !u!1 &7480588622835228602 stripped
 GameObject:
@@ -459,7 +459,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8134761858616956300
+--- !u!114 &2840381759930904564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,11 +468,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7480588622835228602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87e7ba9f24d08b4fb8ae067680bf5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c465ccbf33374f4792cd86c57afa38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  endRange: 30
+  checkDistance: 0.5
+  targetTag: Castle
 --- !u!4 &7826045707849843968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71fe98a5ca2ee9d4ebf68cbbc90366d8, type: 3}
@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8782175
+      value: 1.9199998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -546,7 +546,7 @@ PrefabInstance:
       addedObject: {fileID: 4923948995201093645}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 185922842214972}
+      addedObject: {fileID: 4696970340554361078}
   m_SourcePrefab: {fileID: 100100000, guid: a56374efeeb0a154db70437e0b40370a, type: 3}
 --- !u!4 &8440073475160825199 stripped
 Transform:
@@ -606,7 +606,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &185922842214972
+--- !u!114 &4696970340554361078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,8 +615,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9109368860994701269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87e7ba9f24d08b4fb8ae067680bf5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c465ccbf33374f4792cd86c57afa38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  endRange: 30
+  checkDistance: 0.5
+  targetTag: Castle

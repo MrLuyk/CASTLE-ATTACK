@@ -116,7 +116,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3944945523905767930}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1.3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
-  forceAmount: 15
+  forceAmount: 30
   explosionPrefab: {fileID: 2693124383196626671, guid: a5dd53e1083843247b2e625edcf43949, type: 3}
 --- !u!1001 &984754627696674817
 PrefabInstance:
