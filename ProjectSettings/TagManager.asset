@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Castle
   - Ground
+  - CastleRed
+  - CastleBase
+  - CastlePart
   layers:
   - Default
   - TransparentFX

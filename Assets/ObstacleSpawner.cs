@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject obstaclePrefab;
+    public GameObject obstacleRedPrefab;
     public GameObject obstacleCrownPrefab;
     public float timeToSpawn;
     private int obstacleCount = 0;
@@ -31,9 +32,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnObstacle()
     {
-        if (obstacleCount < obstacleCap)
+        int mightBeRed = Random.Range(1, 6);
+        if (obstacleCount < obstacleCap && mightBeRed < 5)
         {
             Instantiate(obstaclePrefab, transform.position, Quaternion.identity);
+        }
+        if (obstacleCount < obstacleCap && mightBeRed == 5)
+        {
+            Instantiate(obstacleRedPrefab, transform.position, Quaternion.identity);
         }
         if (obstacleCount == obstacleCap)
         {

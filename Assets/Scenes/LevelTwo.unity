@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 4122245596335090875, guid: 6f5cd90e19f3b574f8477f49a5dac8a2, type: 3}
+  obstacleRedPrefab: {fileID: 4122245596335090875, guid: 5d6b4ffd805747e4195b92385aeffa04, type: 3}
   obstacleCrownPrefab: {fileID: 4430870182982846410, guid: 9ff963a05ec63694d9dca7c89c527f80, type: 3}
   timeToSpawn: 0
   obstacleCap: 8
@@ -406,7 +407,7 @@ Light:
   m_Color: {r: 1, g: 0.66801965, b: 0.5896226, a: 1}
   m_Intensity: 5.98
   m_Range: 24.357897
-  m_SpotAngle: 96.556564
+  m_SpotAngle: 110.275116
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:

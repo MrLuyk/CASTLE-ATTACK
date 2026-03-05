@@ -27,5 +27,17 @@ public class Projectile : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+        if (other.gameObject.CompareTag("CastleBase"))
+        {
+            //Destroy(other.gameObject);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("CastleRed"))
+        {
+            //Destroy(other.gameObject);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
+        }
     }
 }
