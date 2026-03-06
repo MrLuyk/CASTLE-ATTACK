@@ -11,7 +11,6 @@ public class Cannon : MonoBehaviour
     public ParticleSystem fireFX;
     public int numProjectiles = 0;
 
-    // Update is called once per frame
     void Update()
     {
         float aimInput = Input.GetAxis("Horizontal");

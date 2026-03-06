@@ -6,10 +6,14 @@ public class CastlePart : MonoBehaviour
 {
     void OnCollisionStay(Collision other)
     {
-            if (other.gameObject.CompareTag("Ground") && gameObject.CompareTag("Castle"))
-            {
-                StartCoroutine(CoUpdate());
-            }
+        if (other.gameObject.CompareTag("Ground") && gameObject.CompareTag("Castle"))
+        {
+            StartCoroutine(CoUpdate());
+        }
+        if (other.gameObject.CompareTag("Ground") && gameObject.CompareTag("CastleRed"))
+        {
+            StartCoroutine(CoUpdate());
+        }
     }
 
     IEnumerator CoUpdate()

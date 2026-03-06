@@ -36,12 +36,20 @@ public class Score : MonoBehaviour
                 scoreAnimator.SetInteger("Stars", 1);
             }
 
-            Invoke("NextLevel",2);
+            Invoke("LoadNextSceneInBuild",2);
         }
     }
 
-    void NextLevel()
+    //void NextLevel()
+    //{
+    //    SceneManager.LoadScene(nextLevel);
+    //}
+    public void LoadNextSceneInBuild()
     {
-        SceneManager.LoadScene(nextLevel);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
 }

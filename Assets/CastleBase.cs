@@ -6,7 +6,9 @@ public class CastleBase : MonoBehaviour
 {
     public float checkDistance = 2.0f;
     public string targetTag = "Castle";
+    public string targetTagRed = "CastleRed";
     private bool blockAbove = false;
+    private bool redBlockAbove = false;
 
     void Update()
     {
@@ -18,11 +20,15 @@ public class CastleBase : MonoBehaviour
 
         if (Physics.Raycast(origin, Vector3.up, out hit, checkDistance))
         {
-            Debug.Log("RAYCAST");
             if (hit.collider.CompareTag(targetTag))
             {
-                Debug.Log("Correct object above: " + hit.collider.name);
+                //Debug.Log("Correct object above: " + hit.collider.name);
                 blockAbove = true;
+            }
+            if (hit.collider.CompareTag(targetTagRed))
+            {
+                //Debug.Log("Correct object above: " + hit.collider.name);
+                redBlockAbove = true;
             }
         }
         BaseCheck();
@@ -34,7 +40,12 @@ public class CastleBase : MonoBehaviour
         {
             StartCoroutine(CoUpdate());
         }
+        if (gameObject.CompareTag("CastleRedBase") && redBlockAbove == false)
+        {
+            StartCoroutine(CoUpdate());
+        }
         blockAbove = false;
+        redBlockAbove = false;
     }
 
 

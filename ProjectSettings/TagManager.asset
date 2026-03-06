@@ -9,6 +9,7 @@ TagManager:
   - CastleRed
   - CastleBase
   - CastlePart
+  - CastleRedBase
   layers:
   - Default
   - TransparentFX

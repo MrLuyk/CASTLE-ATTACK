@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody rigidbody;
     public float forceAmount = 15.0f;
     public GameObject explosionPrefab;
-    // Start is called before the first frame update
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -21,19 +21,13 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         print("Collides with " + other.gameObject.name);
-        if (other.gameObject.CompareTag("Castle"))
+        if (other.gameObject.CompareTag("Castle") || other.gameObject.CompareTag("CastleBase"))
         {
             //Destroy(other.gameObject);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if (other.gameObject.CompareTag("CastleBase"))
-        {
-            //Destroy(other.gameObject);
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-        if (other.gameObject.CompareTag("CastleRed"))
+        if (other.gameObject.CompareTag("CastleRed") || other.gameObject.CompareTag("CastleRedBase"))
         {
             //Destroy(other.gameObject);
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
