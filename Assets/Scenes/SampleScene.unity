@@ -267,6 +267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 9104132614060934122, guid: 7a2a13ad3390b4149901b33e260a2b21, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1119433453986132558, guid: 7a2a13ad3390b4149901b33e260a2b21, type: 3}
     m_RemovedGameObjects: []

@@ -12,25 +12,29 @@ public class Player : MonoBehaviour
     Rigidbody rigidbody;
     public bool canJump = false;
     public int jumpCount = 0;
-    public float jumpForce = 10.0f;
+    public float jumpForce = 10000.0f;
     public Text tryAgain;
-    public int sceneCount;
+    //public int sceneCount;
 
     void Start()
     {
-        sceneCount = SceneManager.sceneCountInBuildSettings;
-        Debug.Log("Scene Number " + sceneCount);
+        //sceneCount = SceneManager.sceneCountInBuildSettings;
+        //Debug.Log("Scene Number " + sceneCount);
         rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        if (transform.position.y >= 1.5f && jumpCount == 2)
+        if (transform.position.y >= 1.5f && jumpCount >= 1)
         {
             canJump = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && canJump == true && jumpCount < 2)
+        else if (Input.GetKeyDown(KeyCode.Space) && canJump == true && jumpCount < 1)
         {
+            Vector3 velocity = rigidbody.velocity;
+            velocity.y = 0f;
+            rigidbody.velocity = velocity;
+
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             jumpCount++;
         }

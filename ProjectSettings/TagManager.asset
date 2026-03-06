@@ -10,6 +10,7 @@ TagManager:
   - CastleBase
   - CastlePart
   - CastleRedBase
+  - Cannonball
   layers:
   - Default
   - TransparentFX
