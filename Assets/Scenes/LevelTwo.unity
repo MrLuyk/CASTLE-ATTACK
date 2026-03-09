@@ -465,7 +465,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 7125b814ab3de8e4f86343aaaad8e41c, type: 2}
   m_EnableTreeColliders: 1
@@ -1142,6 +1142,7 @@ MonoBehaviour:
   tiles:
   - {fileID: 1963584960}
   - {fileID: 924774187}
+  left: -225
 --- !u!4 &1491487415
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1357,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: ef1e1da031169c3469cb3797bdf5f8b0, type: 2}
   m_EnableTreeColliders: 1
