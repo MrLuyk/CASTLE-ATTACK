@@ -328,7 +328,7 @@ MonoBehaviour:
   obstacleRedPrefab: {fileID: 4122245596335090875, guid: 5d6b4ffd805747e4195b92385aeffa04, type: 3}
   obstacleCrownPrefab: {fileID: 4430870182982846410, guid: 9ff963a05ec63694d9dca7c89c527f80, type: 3}
   timeToSpawn: 0
-  obstacleCap: 8
+  obstacleCap: 12
   sceneCount: 0
 --- !u!4 &429366188
 Transform:
